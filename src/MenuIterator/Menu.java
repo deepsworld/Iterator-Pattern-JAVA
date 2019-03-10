@@ -13,10 +13,16 @@ public class Menu {
 
     ArrayList<MenuItem> menuItems;
 
-    // -- constructors
+    /* --------------------------------------
+      COnstructor.
+    -----------------------------------------*/
     public Menu(){
         menuItems = new ArrayList<MenuItem>();
     }
+
+    /* --------------------------------------
+      Class methods.
+    -----------------------------------------*/
     // add item to the list
     public void addItem(MenuItem item){
         menuItems.add(item);
@@ -36,7 +42,9 @@ public class Menu {
         menuItems.remove(index);
     }
 
-    // factory methods
+    /* --------------------------------------
+      Factory methods.
+    -----------------------------------------*/
     public MenuIterator getAllItemsIterator(){
         return new AllItemsIterator(this,0);
     }
@@ -58,7 +66,9 @@ public class Menu {
         return new PriceIterator(this, 0, price);
     }
 
-
+    /* --------------------------------------
+      All the inner classes are defined below.
+    -----------------------------------------*/
     // Iterates over all the menu items.
     private class AllItemsIterator implements MenuIterator{
         private int current_index;
