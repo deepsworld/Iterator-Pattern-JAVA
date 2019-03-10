@@ -29,8 +29,7 @@ public class MenuItem {
         return price;
     }
 
-    @Override
     public String toString() {
-        return (item_name + "\t $" + price + "\t" + category );
+        return (item_name + "\t $" + price);
     }
 }
